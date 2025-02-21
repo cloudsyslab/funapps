@@ -122,10 +122,13 @@ function draw() {
     }
   }
 
-  // Display hover info at bottom center with multi-line text
+  // Display hover info at top center
   if (infoText != "") {
     textAlign(CENTER);
-    text(infoText, width / 2, height - 40); // Adjusted upward to fit two lines
+    fill(0, 150);              // Semi-transparent black background for readability
+    rect(width / 2 - 150, 120, 300, 60); // Rectangle below instruction box
+    fill(255);                 // White text
+    text(infoText, width / 2, 140); // Positioned at top, below instructions
     textAlign(LEFT);
   }
 }
